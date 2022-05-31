@@ -1,5 +1,10 @@
 package com.uce.edu.demo.consultorio;
 
+import org.springframework.stereotype.Component;
+
+//Les voy a poner una metadata
+//1) IoC Component
+@Component
 public class Paciente {
 	
 	private String nombre;
