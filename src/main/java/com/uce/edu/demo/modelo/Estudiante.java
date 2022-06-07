@@ -5,6 +5,11 @@ public class Estudiante {
 	private String cedula;
 	private String nombre;
 	private String apellido;
+	
+	@Override
+	public String toString() {
+		return "Estudiante [cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + "]";
+	}
 
 	// Set y Get
 	public String getCedula() {

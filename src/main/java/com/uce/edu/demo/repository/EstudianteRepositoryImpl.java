@@ -18,7 +18,9 @@ public class EstudianteRepositoryImpl implements IEstudianteRepository {
 	public Estudiante leer(String apellido) {
 		// TODO Auto-generated method stub
 		System.out.println("Se ha buscado en la base los estudiantes con apellido: " + apellido);
-		return null;
+		Estudiante e = new Estudiante();
+		e.setApellido(apellido);
+		return e;
 	}
 
 	@Override
