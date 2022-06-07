@@ -8,7 +8,7 @@ public class Estudiante {
 	
 	@Override
 	public String toString() {
-		return "Estudiante [cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + "]";
+		return "Estudiante [Cédula = " + cedula + ", Nombre = " + nombre + ", Apellido = " + apellido + "]";
 	}
 
 	// Set y Get
