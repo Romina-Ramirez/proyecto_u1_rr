@@ -7,10 +7,22 @@ import com.uce.edu.demo.banco.modelo.CuentaBancaria;
 import com.uce.edu.demo.banco.repository.ICuentaBancariaRepository;
 
 @Service
-public class CuentaBancariaServiceImpl implements ICuentaBancariaService{
-	
+public class CuentaBancariaServiceImpl implements ICuentaBancariaService {
+
 	@Autowired
 	private ICuentaBancariaRepository bancariaRepository;
+
+	@Override
+	public void crearCuenta(CuentaBancaria c) {
+		// TODO Auto-generated method stub
+		this.bancariaRepository.insertar(c);
+	}
+
+	@Override
+	public CuentaBancaria buscar(String numero) {
+		// TODO Auto-generated method stub
+		return this.bancariaRepository.buscar(numero);
+	}
 
 	@Override
 	public void actualizar(CuentaBancaria c) {
@@ -19,9 +31,9 @@ public class CuentaBancariaServiceImpl implements ICuentaBancariaService{
 	}
 
 	@Override
-	public CuentaBancaria buscar(String numero) {
+	public void borrar(String numero) {
 		// TODO Auto-generated method stub
-		return this.bancariaRepository.buscar(numero);
+		this.bancariaRepository.eliminar(numero);
 	}
 
 }

@@ -7,12 +7,12 @@ import org.springframework.stereotype.Repository;
 import com.uce.edu.demo.banco.modelo.CuentaBancaria;
 
 @Repository
-public class CuentaBancariaRepositoryImpl implements ICuentaBancariaRepository{
+public class CuentaBancariaRepositoryImpl implements ICuentaBancariaRepository {
 
 	@Override
-	public void actualizar(CuentaBancaria c) {
-		// Aqui hay que construir los SQL's
-		System.out.println("Cuenta bancaria actualizada: " + c);
+	public void insertar(CuentaBancaria c) {
+		// TODO Auto-generated method stub
+		System.out.println("Se creo la cuenta bancaria: " + c);
 	}
 
 	@Override
@@ -23,6 +23,18 @@ public class CuentaBancariaRepositoryImpl implements ICuentaBancariaRepository{
 		cta.setNumero(numero);
 		cta.setSaldo(new BigDecimal(100));
 		return cta;
+	}
+
+	@Override
+	public void actualizar(CuentaBancaria c) {
+		// Aqui hay que construir los SQL's
+		System.out.println("Cuenta bancaria actualizada: " + c);
+	}
+
+	@Override
+	public void eliminar(String numero) {
+		// TODO Auto-generated method stub
+		System.out.println("Se ha eliminado la cuenta con número: " + numero);
 	}
 
 }

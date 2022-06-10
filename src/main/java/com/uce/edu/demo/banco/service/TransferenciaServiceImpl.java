@@ -13,8 +13,10 @@ import com.uce.edu.demo.banco.repository.ITransferenciaRepository;
 @Service
 public class TransferenciaServiceImpl implements ITransferenciaService {
 
-	/* Como la lógica de CuentaBancariaService no hace nada
-	   Si puedo inyectar el CuentaBancariaRepository */
+	/*
+	 * Como la lógica de CuentaBancariaService no hace nada Si puedo inyectar el
+	 * CuentaBancariaRepository
+	 */
 	@Autowired
 	private ICuentaBancariaService bancariaService;
 
@@ -42,6 +44,24 @@ public class TransferenciaServiceImpl implements ITransferenciaService {
 		t.setMontoTransferir(monto);
 		t.setFechaTransferencia(LocalDateTime.now());
 		this.itransferenciaRepository.insertar(t);
+	}
+
+	@Override
+	public Transferencia buscar(LocalDateTime fecha) {
+		// TODO Auto-generated method stub
+		return this.itransferenciaRepository.leer(fecha);
+	}
+
+	@Override
+	public void actualizar(Transferencia t) {
+		// TODO Auto-generated method stub
+		this.itransferenciaRepository.actualizar(t);
+	}
+
+	@Override
+	public void borrar(String numero) {
+		// TODO Auto-generated method stub
+		this.itransferenciaRepository.eliminar(numero);
 	}
 
 }
