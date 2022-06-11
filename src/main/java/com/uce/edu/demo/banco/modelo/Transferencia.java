@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 
 public class Transferencia {
 
-	private String numeroTransferencia;
 	private String numeroCuentaOrigen;
 	private String numeroCuentaDestino;
 	private BigDecimal montoTransferir;
@@ -19,14 +18,6 @@ public class Transferencia {
 	}
 
 	// Set y Get
-	public String getNumeroTransferencia() {
-		return numeroTransferencia;
-	}
-
-	public void setNumeroTransferencia(String numeroTransferencia) {
-		this.numeroTransferencia = numeroTransferencia;
-	}
-
 	public String getNumeroCuentaOrigen() {
 		return numeroCuentaOrigen;
 	}

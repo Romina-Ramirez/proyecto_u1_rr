@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 
 public class Deposito {
 
-	private String numeroDeposito;
 	private LocalDateTime fecha;
 	private String numeroCuentaDestino;
 	private BigDecimal monto;
@@ -16,14 +15,6 @@ public class Deposito {
 	}
 
 	// Set y Get
-	public String getNumeroDeposito() {
-		return numeroDeposito;
-	}
-
-	public void setNumeroDeposito(String numeroDeposito) {
-		this.numeroDeposito = numeroDeposito;
-	}
-
 	public LocalDateTime getFecha() {
 		return fecha;
 	}

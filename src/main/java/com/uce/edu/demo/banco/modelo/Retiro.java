@@ -5,26 +5,16 @@ import java.time.LocalDateTime;
 
 public class Retiro {
 
-	private String numeroRetiro;
 	private LocalDateTime fecha;
 	private String numeroCuentaOrigen;
 	private BigDecimal monto;
 
 	@Override
 	public String toString() {
-		return "Retiro [numeroRetiro=" + numeroRetiro + ", fecha=" + fecha + ", numeroCuentaOrigen="
-				+ numeroCuentaOrigen + ", monto=" + monto + "]";
+		return "Retiro [fecha=" + fecha + ", numeroCuentaOrigen=" + numeroCuentaOrigen + ", monto=" + monto + "]";
 	}
 
 	// Set y Get
-	public String getNumeroRetiro() {
-		return numeroRetiro;
-	}
-
-	public void setNumeroRetiro(String numeroRetiro) {
-		this.numeroRetiro = numeroRetiro;
-	}
-
 	public LocalDateTime getFecha() {
 		return fecha;
 	}
