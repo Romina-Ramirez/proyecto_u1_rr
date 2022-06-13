@@ -29,7 +29,6 @@ public class RetiroServiceImpl implements IRetiroService {
 		this.bancariaService.actualizar(ctaOrigen);
 
 		Retiro retiro = new Retiro();
-		retiro.setNumeroRetiro("1826292019");
 		retiro.setFecha(LocalDateTime.now());
 		retiro.setNumeroCuentaOrigen(numeroCtaOrigen);
 		retiro.setMonto(monto);

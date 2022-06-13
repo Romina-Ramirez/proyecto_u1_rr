@@ -48,7 +48,7 @@ public class TransaccionServiceImpl implements ITransaccionService {
 	@Override
 	public void retiro(String ctaRetiro, BigDecimal monto) {
 		// TODO Auto-generated method stub
-		this.retiro(ctaRetiro, monto);
+		this.iRetiroService.realizarRetiro(ctaRetiro, monto);
 	}
 
 	@Override
