@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.uce.edu.demo.pasteleria.modelo.ChefPastelero;
+
 @Service
 public class Pedido3 {
 
@@ -11,7 +13,7 @@ public class Pedido3 {
 	private String descripcion;
 
 	// 3) DI por métodos Set
-	private Pastelero pastelero; // A su método Set le pongo @Autowired
+	private ChefPastelero pastelero; // A su método Set le pongo @Autowired
 	private Cliente cliente; // A su método Set le pongo @Autowired
 
 	public String realizarPedido(LocalDateTime fechaPedido, String descripcion, String nombrePastelero,
@@ -48,12 +50,12 @@ public class Pedido3 {
 		this.descripcion = descripcion;
 	}
 
-	public Pastelero getPastelero() {
+	public ChefPastelero getPastelero() {
 		return pastelero;
 	}
 
 	@Autowired
-	public void setPastelero(Pastelero pastelero) {
+	public void setPastelero(ChefPastelero pastelero) {
 		this.pastelero = pastelero;
 	}
 

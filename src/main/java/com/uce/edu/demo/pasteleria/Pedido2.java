@@ -3,17 +3,19 @@ package com.uce.edu.demo.pasteleria;
 import java.time.LocalDateTime;
 import org.springframework.stereotype.Service;
 
+import com.uce.edu.demo.pasteleria.modelo.ChefPastelero;
+
 @Service
 public class Pedido2 {
 
 	private LocalDateTime fechaPedido;
 	private String descripcion;
 
-	private Pastelero pastelero;
+	private ChefPastelero pastelero;
 	private Cliente cliente;
 
 	// 2) DI por constructor
-	public Pedido2(Pastelero pastelero, Cliente cliente) {
+	public Pedido2(ChefPastelero pastelero, Cliente cliente) {
 		this.pastelero = pastelero;
 		this.cliente = cliente;
 	}
@@ -52,11 +54,11 @@ public class Pedido2 {
 		this.descripcion = descripcion;
 	}
 
-	public Pastelero getPastelero() {
+	public ChefPastelero getPastelero() {
 		return pastelero;
 	}
 
-	public void setPastelero(Pastelero pastelero) {
+	public void setPastelero(ChefPastelero pastelero) {
 		this.pastelero = pastelero;
 	}
 
