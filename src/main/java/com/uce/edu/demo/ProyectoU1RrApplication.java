@@ -17,25 +17,26 @@ import com.uce.edu.demo.pasteleria.modelo.AuxiliarPastelero;
 import com.uce.edu.demo.pasteleria.modelo.ChefPastelero;
 import com.uce.edu.demo.pasteleria.modelo.Pedido;
 import com.uce.edu.demo.pasteleria.service.IPedidoService;
+import com.uce.edu.demo.repository.IMatriculaRepository;
 import com.uce.edu.demo.service.IMatriculaService;
 
 @SpringBootApplication
 public class ProyectoU1RrApplication implements CommandLineRunner {
 
 	@Autowired
-	private ChefPastelero chefP;
+	private ProfesorGeneral general;
 
 	@Autowired
-	private ChefPastelero chefP1;
+	private ProfesorGeneral general1;
 
 	@Autowired
-	private AuxiliarPastelero auxiliarP;
+	private ProfesorMateria materia;
 
 	@Autowired
-	private AuxiliarPastelero auxiliarP1;
+	private ProfesorMateria materia1;
 
 	@Autowired
-	private IPedidoService iPedidoService;
+	private IMatriculaService iMatriculaService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU1RrApplication.class, args);
@@ -45,41 +46,35 @@ public class ProyectoU1RrApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 		System.out.println("Ejemplo SINGLETON");
-		this.chefP.setNombre("Romina");
-		this.chefP.setApellido("Ramírez");
-		this.chefP.setEdad(20);
-		this.chefP.setEspecialidad("General");
-		System.out.println(this.chefP);
+		this.general.setNombre("Romina");
+		this.general.setApellido("Ramírez");
+		System.out.println(this.general);
 
-		System.out.println("-------------------------");
-		System.out.println(this.chefP1);
+		System.out.println(" ------------------ ");
+		System.out.println(this.general1);
 
-		System.out.println("-------------------------");
-		this.chefP1.setNombre("Mina");
-		this.chefP1.setEdad(45);
-		System.out.println(this.chefP);
+		System.out.println(" ------------------ ");
+		this.general1.setNombre("Pepito");
+		System.out.println(this.general);
 
-		System.out.println("--------------------------");
-		System.out.println(this.chefP1);
+		System.out.println(" ------------------ ");
+		System.out.println(this.general1);
 
 		System.out.println("\nEjemplo PROTOTYPE");
-		this.auxiliarP.setNombre("Maria");
-		this.auxiliarP.setApellido("Gomez");
-		this.auxiliarP.setEdad(25);
-		this.auxiliarP.setEspecialidad("Pasteles");
-		this.auxiliarP.setExperiencia(1);
-		System.out.println(this.auxiliarP);
+		this.materia.setNombre("Daniel");
+		this.materia.setApellido("Teran");
+		System.out.println(this.materia);
 
-		System.out.println("---------------------------");
-		System.out.println(this.auxiliarP1);
+		System.out.println(" ------------------ ");
+		System.out.println(this.materia1);
 
 		System.out.println();
-		Pedido pedido = new Pedido();
-		pedido.setNumPedido("1234");
-		pedido.setFechaPedido(LocalDateTime.now());
-		pedido.setDescripcion("Pastel de chocolate");
+		Matricula matricula1 = new Matricula();
+		matricula1.setEstudiante(new Estudiante());
+		matricula1.setMateria(new ArrayList<Materia>());
+		matricula1.setNumero("1123");
 
-		this.iPedidoService.ingresarPedido(pedido);
+		this.iMatriculaService.ingresarMatricula(matricula1);
 
 	}
 
